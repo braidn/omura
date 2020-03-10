@@ -10,6 +10,9 @@ GEM
     hansi (0.2.0)
     ma (0.1.0)
       wisper_next
+    minitest (5.14.0)
+    minitest-matchers_vaccine (1.0.4)
+      minitest (~> 5.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     mustermann-contrib (1.1.1)
@@ -29,6 +32,7 @@ PLATFORMS
 DEPENDENCIES
   hanami-api (~> 0.1)
   ma
+  minitest-matchers_vaccine
   sorbet
   sorbet-runtime
 

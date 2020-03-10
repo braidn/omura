@@ -8,3 +8,7 @@ gem "hanami-api", "~> 0.1"
 gem 'sorbet', :group => :development
 gem 'sorbet-runtime'
 gem 'ma'
+
+group :test do
+  gem "minitest-matchers_vaccine"
+end
