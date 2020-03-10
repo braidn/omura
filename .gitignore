@@ -1,0 +1,5 @@
+*.gem
+*.rbc
+/.config
+/.bundle
+sorbet/rbi/hidden-definitions/errors.txt

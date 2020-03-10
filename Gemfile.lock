@@ -15,12 +15,18 @@ GEM
       mustermann (= 1.1.1)
     rack (2.2.2)
     ruby2_keywords (0.0.2)
+    sorbet (0.5.5429)
+      sorbet-static (= 0.5.5429)
+    sorbet-runtime (0.5.5429)
+    sorbet-static (0.5.5429-universal-darwin-14)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   hanami-api (~> 0.1)
+  sorbet
+  sorbet-runtime
 
 BUNDLED WITH
    2.1.4
