@@ -8,6 +8,8 @@ GEM
       mustermann-contrib (~> 1.0)
       rack (~> 2.0)
     hansi (0.2.0)
+    ma (0.1.0)
+      wisper_next
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     mustermann-contrib (1.1.1)
@@ -19,12 +21,14 @@ GEM
       sorbet-static (= 0.5.5429)
     sorbet-runtime (0.5.5429)
     sorbet-static (0.5.5429-universal-darwin-14)
+    wisper_next (0.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   hanami-api (~> 0.1)
+  ma
   sorbet
   sorbet-runtime
 
