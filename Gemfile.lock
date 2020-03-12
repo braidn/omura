@@ -13,6 +13,7 @@ GEM
     minitest (5.14.0)
     minitest-matchers_vaccine (1.0.4)
       minitest (~> 5.0)
+    mocha (1.11.2)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     mustermann-contrib (1.1.1)
@@ -33,6 +34,7 @@ DEPENDENCIES
   hanami-api (~> 0.1)
   ma
   minitest-matchers_vaccine
+  mocha
   sorbet
   sorbet-runtime
 

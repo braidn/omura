@@ -11,4 +11,5 @@ gem 'ma'
 
 group :test do
   gem 'minitest-matchers_vaccine'
+  gem 'mocha'
 end
