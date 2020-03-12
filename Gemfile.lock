@@ -1,6 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    concurrent-ruby (1.1.6)
+    dry-core (0.4.9)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.3.0)
+    dry-events (0.2.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.4)
+      dry-equalizer (~> 0.2)
     hanami-api (0.1.0)
       hanami-router (~> 2.0.alpha)
     hanami-router (2.0.0.alpha2)
@@ -8,8 +16,6 @@ GEM
       mustermann-contrib (~> 1.0)
       rack (~> 2.0)
     hansi (0.2.0)
-    ma (0.1.0)
-      wisper_next
     minitest (5.14.0)
     minitest-matchers_vaccine (1.0.4)
       minitest (~> 5.0)
@@ -25,14 +31,13 @@ GEM
       sorbet-static (= 0.5.5429)
     sorbet-runtime (0.5.5429)
     sorbet-static (0.5.5429-universal-darwin-14)
-    wisper_next (0.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  dry-events
   hanami-api (~> 0.1)
-  ma
   minitest-matchers_vaccine
   mocha
   sorbet
