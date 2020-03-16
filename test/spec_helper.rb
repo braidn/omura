@@ -1,4 +1,4 @@
-# typed: true
+# typed: ignore
 ENV['RACK_ENV'] = 'test'
 
 require 'bundler'

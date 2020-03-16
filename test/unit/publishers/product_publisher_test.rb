@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# typed: false
+# typed: ignore
 
 require_relative '../../spec_helper'
 

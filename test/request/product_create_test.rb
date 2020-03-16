@@ -6,7 +6,7 @@ require_relative '../spec_helper'
 class ProductCreateTest < RequestTest
   describe "POST /api/v1/products" do
     let(:product_params) do
-      { 
+      {
         name: 'OldGregg',
         description: 'The Locke Monster',
         active: 'true'

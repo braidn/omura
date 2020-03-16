@@ -1,4 +1,4 @@
-# typed: false
+# typed: ignore
 require_relative '../spec_helper'
 
 class RootTest < RequestTest
