@@ -11,8 +11,6 @@ class BasePublisher
 
   sig {params(id: Symbol).returns(Dry::Events::Publisher)}
   def publisher(id)
-    ::Dry::Events::Publisher[id].tap do |publisher|
-      publisher.class.registry[id] = self
-    end
+    ::Dry::Events::Publisher[id]
   end
 end
