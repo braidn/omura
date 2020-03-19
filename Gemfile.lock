@@ -25,6 +25,7 @@ GEM
     mustermann-contrib (1.1.1)
       hansi (~> 0.2.0)
       mustermann (= 1.1.1)
+    prettier (0.18.0)
     rack (2.2.2)
     ruby2_keywords (0.0.2)
     sorbet (0.5.5429)
@@ -40,6 +41,7 @@ DEPENDENCIES
   hanami-api (~> 0.1)
   minitest-matchers_vaccine
   mocha
+  prettier
   sorbet
   sorbet-runtime
 
