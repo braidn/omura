@@ -2,7 +2,7 @@
 #
 module Dry::Events
   class Publisher
-    sig {params(id: Symbol).returns(T::Array[Dry::Events::Publisher])}
+    sig {params(id: Symbol).returns(Dry::Events::Publisher)}
     def self.[](id); end
 
     module ClassMethods

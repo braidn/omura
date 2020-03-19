@@ -1,9 +1,11 @@
 # frozen_string_literal: true
-# typed: true
-require 'dry/events/publisher'
+# typed: strong
+require_relative './base_publisher'
 
-class ProductPublisher
-  include Dry::Events::Publisher[:product_publisher]
-
-  register_event('product.created')
+class ProductPublisher < BasePublisher
+  sig {void}
+  def initialize
+    publisher(:product_publisher)
+    register_event('product.created')
+  end
 end
