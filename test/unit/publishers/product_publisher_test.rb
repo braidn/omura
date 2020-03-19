@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # typed: ignore
 
 require_relative '../../spec_helper'
@@ -15,7 +16,6 @@ class ProductPublisherTest < UnitTest
       end
 
       subject.publish('product.created', product: params)
-
 
       _(event_data).must_equal params
     end

@@ -18,5 +18,4 @@ class RequestTest < Minitest::Spec
   end
 end
 
-class UnitTest < Minitest::Spec
-end
+class UnitTest < Minitest::Spec; end
