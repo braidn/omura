@@ -5,6 +5,9 @@ module Dry::Events
     sig {params(id: Symbol).returns(Dry::Events::Publisher)}
     def self.[](id); end
 
+    sig {returns(Concurrent::Map)}
+    def self.registry; end
+
     module ClassMethods
       sig{params(event_id: String, payload: T.untyped).void}
       def register_event(event_id, payload = {}); end
