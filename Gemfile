@@ -9,6 +9,7 @@ gem 'sorbet', group: 'development'
 gem 'sorbet-runtime'
 gem 'prettier'
 gem 'dry-events'
+gem 'dry-validation'
 
 group :test do
   gem 'minitest-matchers_vaccine'
