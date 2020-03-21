@@ -1,0 +1,17 @@
+# vim: set fenc=utf-8 ft=dosini:
+
+[file-type]
+
+command=bundle exec srb tc $(VIM_FILENAME)
+cwd=<root>
+output=quickfix
+errorformat=%f:%l:%m
+save=1
+
+[file-fix]
+
+command=bundle exec rbprettier --write $(VIM_FILENAME)
+cwd=<root>
+output=quickfix
+errorformat=%f:%l:%m
+save=1
