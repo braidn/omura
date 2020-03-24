@@ -2,7 +2,7 @@
 
 [file-type]
 
-command=bundle exec srb tc $(VIM_FILENAME)
+command=bundle exec srb tc $(VIM_FILEPATH)
 cwd=<root>
 output=quickfix
 errorformat=%f:%l:%m
@@ -10,7 +10,7 @@ save=1
 
 [file-fix]
 
-command=bundle exec rbprettier --write $(VIM_FILENAME)
+command=bundle exec rbprettier --write $(VIM_FILEPATH)
 cwd=<root>
 output=quickfix
 errorformat=%f:%l:%m
