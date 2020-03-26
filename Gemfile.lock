@@ -67,6 +67,7 @@ GEM
       sorbet-static (= 0.5.5429)
     sorbet-runtime (0.5.5429)
     sorbet-static (0.5.5429-universal-darwin-14)
+    ulid-ruby (1.0.0)
 
 PLATFORMS
   ruby
@@ -80,6 +81,7 @@ DEPENDENCIES
   prettier
   sorbet
   sorbet-runtime
+  ulid-ruby
 
 BUNDLED WITH
    2.1.4
