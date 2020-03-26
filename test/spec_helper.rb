@@ -14,7 +14,7 @@ Dir[File.join(__dir__, '..', 'publishers', '*.rb')].each { |file| require file }
 
 class RequestTest < Minitest::Spec
   def app
-    Rack::MockRequest.new(App.new)
+    @app ||= Rack::MockRequest.new(App.new)
   end
 end
 
