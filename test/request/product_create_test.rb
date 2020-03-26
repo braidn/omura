@@ -19,11 +19,10 @@ class ProductCreateTest < RequestTest
         req = app.post product_create_route, params: product_params
         _(req.status).must_equal 201
       end
-    end
 
-    describe 'failure' do
-      it 'responds with an error object' do
-        req = app.post product_create_route, params: {}
+      it 'sends the location of the new object for retrieval' do
+        req = app.post product_create_route, params: product_params
+        _(req.headers['Location']).must_match %r{\/api\/v1\/product\/\S+}
       end
     end
   end
