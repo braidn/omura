@@ -19,5 +19,17 @@ class ProductPublisherTest < UnitTest
 
       _(event_data).must_equal params
     end
+
+    it 'emits the product requested event' do
+      params = { id: '123ME' }
+      event_data = {}
+      subject.subscribe('product.requested') do |event|
+        event_data = event[:product]
+      end
+
+      subject.publish('product.requested', product: params)
+
+      _(event_data).must_equal params
+    end
   end
 end
