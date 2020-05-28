@@ -16,12 +16,12 @@ class ProductCreateTest < RequestTest
       let(:product_create_route) { '/api/v1/products' }
 
       it 'successfully sends a message to create a new product' do
-        req = app.post product_create_route, params: product_params
+        req = post product_create_route, product_params
         _(req.status).must_equal 201
       end
 
       it 'sends the location of the new object for retrieval' do
-        req = app.post product_create_route, params: product_params
+        req = post product_create_route, product_params
         _(req.headers['Location']).must_match %r{\/api\/v1\/product\/\S+}
       end
     end
