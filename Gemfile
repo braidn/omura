@@ -15,4 +15,5 @@ gem 'ulid-ruby'
 group :test do
   gem 'minitest-matchers_vaccine'
   gem 'mocha'
+  gem 'rack-test'
 end

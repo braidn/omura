@@ -44,9 +44,9 @@ GEM
       dry-equalizer (~> 0.2)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.5)
-    hanami-api (0.1.0)
+    hanami-api (0.1.1)
       hanami-router (~> 2.0.alpha)
-    hanami-router (2.0.0.alpha2)
+    hanami-router (2.0.0.alpha3)
       mustermann (~> 1.0)
       mustermann-contrib (~> 1.0)
       rack (~> 2.0)
@@ -62,6 +62,8 @@ GEM
       mustermann (= 1.1.1)
     prettier (0.18.0)
     rack (2.2.2)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     ruby2_keywords (0.0.2)
     sorbet (0.5.5429)
       sorbet-static (= 0.5.5429)
@@ -79,6 +81,7 @@ DEPENDENCIES
   minitest-matchers_vaccine
   mocha
   prettier
+  rack-test
   sorbet
   sorbet-runtime
   ulid-ruby
