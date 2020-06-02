@@ -14,6 +14,16 @@ class App < Hanami::API
   scope 'api' do
     use BodyParamsValidator
     scope 'v1' do
+      get '/product/:id' do
+        publisher = ProductPublisher.new
+        repo = ProductRepository.new
+
+        product = repo.get(params[:id])
+        publisher.publish('product.requested', id: params[:id]) if product
+
+        json(product, 'application/hal+json')
+      end
+
       post '/products' do
         publisher = ProductPublisher.new
         id = ULID.generate
