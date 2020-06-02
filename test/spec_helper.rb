@@ -11,7 +11,7 @@ require 'rack/mock'
 require 'rack/test'
 
 Dir[File.join(__dir__, '..', 'publishers', '*.rb')].each { |file| require file }
-Dir[File.join(__dir__, '..', 'events', '*.rb')].each { |file| require file }
+Dir[File.join(__dir__, '..', 'repositories', '*.rb')].each { |file| require file }
 Dir[File.join(__dir__, 'support', 'schemas', '*.rb')].each do |file|
   require file
 end
