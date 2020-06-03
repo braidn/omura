@@ -1,3 +1,3 @@
 require_relative './app'
 
-App.run
+run App.new
