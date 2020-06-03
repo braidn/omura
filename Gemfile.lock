@@ -12,10 +12,6 @@ GEM
     dry-core (0.4.9)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.3.0)
-    dry-events (0.2.0)
-      concurrent-ruby (~> 1.0)
-      dry-core (~> 0.4)
-      dry-equalizer (~> 0.2)
     dry-inflector (0.2.0)
     dry-initializer (3.0.3)
     dry-logic (1.0.6)
@@ -37,13 +33,6 @@ GEM
       dry-equalizer (~> 0.3)
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
-    dry-validation (1.5.0)
-      concurrent-ruby (~> 1.0)
-      dry-container (~> 0.7, >= 0.7.1)
-      dry-core (~> 0.4)
-      dry-equalizer (~> 0.2)
-      dry-initializer (~> 3.0)
-      dry-schema (~> 1.5)
     hanami-api (0.1.1)
       hanami-router (~> 2.0.alpha)
     hanami-router (2.0.0.alpha3)
@@ -54,7 +43,6 @@ GEM
     minitest (5.14.0)
     minitest-matchers_vaccine (1.0.4)
       minitest (~> 5.0)
-    mocha (1.11.2)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     mustermann-contrib (1.1.1)
@@ -75,11 +63,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dry-events
-  dry-validation
+  dry-schema
   hanami-api (~> 0.1)
   minitest-matchers_vaccine
-  mocha
   prettier
   rack-test
   sorbet
