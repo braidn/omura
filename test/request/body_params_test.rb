@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 #
-# typed: false
+# typed: ignore
 
 require_relative '../spec_helper'
 
@@ -16,16 +16,14 @@ class BodyParamsTest < RequestTest
   let(:api) { Rack::MockRequest.new(base_app) }
   let(:params) do
     {
-      _links: {},
+      _links: { self: { href: '/monster/123' } },
       attributes: {
         name: 'OldGregg', description: 'The Locke Monster', active: true
       }
     }
   end
   let(:missing_params) do
-    {
-      name: 'OldGregg', description: 'The Locke Monster', active: true
-    }
+    { name: 'OldGregg', description: 'The Locke Monster', active: true }
   end
 
   describe 'POST any resource' do

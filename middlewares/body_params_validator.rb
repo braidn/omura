@@ -1,7 +1,24 @@
 # frozen_string_literal: true
 #
 # typed: true
-require_relative '../schemas/body_params'
+
+class BodyParamsContract
+  MissingParams = Struct.new(:errors)
+
+  def call(params)
+    params.include?('_links') ? links_present : links_missing
+  end
+
+  private
+
+  def links_missing
+    MissingParams.new(['Missing required _links object'])
+  end
+
+  def links_present
+    MissingParams.new([])
+  end
+end
 
 class BodyParamsValidator
   def initialize(app)
