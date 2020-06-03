@@ -1,16 +1,11 @@
 # frozen_string_literal: true
 # typed: strong
 #
-require 'dry/events/publisher'
-
 class BasePublisher
   extend T::Sig
-  extend Dry::Events::Publisher::ClassMethods
-  include Dry::Events
-  include Dry::Events::Publisher::InstanceMethods
 
-  sig { params(id: Symbol).returns(Dry::Events::Publisher) }
+  sig { params(id: Symbol).returns(T::Boolean) }
   def publisher(id)
-    ::Dry::Events::Publisher[id]
+    true
   end
 end
