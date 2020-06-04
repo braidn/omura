@@ -8,6 +8,7 @@ class ProductCreateTest < RequestTest
     describe 'success' do
       let(:product_params) do
         {
+          _links: { type: { href: '/api/v1/products' }},
           attributes: {
             name: 'OldGregg', description: 'The Locke Monster', active: true
           }
