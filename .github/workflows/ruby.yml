@@ -31,5 +31,3 @@ jobs:
       run: bundle install
     - name: Run tests
       run: bundle exec ruby -Itest -e 'Dir["./test/**/{test_*,*_test}.rb"].each &method(:require)' --
-    - name: Run type checks
-      run: bundle exec srb tc
