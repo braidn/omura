@@ -29,7 +29,5 @@ jobs:
         ruby-version: 2.7
     - name: Install dependencies
       run: bundle install
-    - name: Run type checks
-      run: bundle exec srb tc
     - name: Run tests
       run: bundle exec ruby -Itest -e 'Dir["./test/**/{test_*,*_test}.rb"].each &method(:require)' --

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#typed: strong
+#typed: true
 PRODUCTS = [
   {
     id: '123ME',

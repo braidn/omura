@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# typed: false
+# typed: ignore
 
 require_relative '../spec_helper'
 
@@ -36,15 +36,6 @@ class ProductGetTest < RequestTest
         res = get product_get_route
 
         _(res.status).must_equal 200
-      end
-
-      describe 'response serialization' do
-        it 'returns a HAL serialized JSON that represents a product' do
-          res = get product_get_route
-          contract = ProductResponseContract.new.call(JSON.parse(res.body))
-
-          _(contract.errors).must_be :empty?
-        end
       end
     end
   end

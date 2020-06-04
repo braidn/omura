@@ -8,8 +8,5 @@ class ProductPublisher < BasePublisher
   sig { void }
   def initialize
     publisher(:product_publisher)
-
-    register_event('product.created')
-    register_event('product.requested')
   end
 end
