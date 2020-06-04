@@ -2,6 +2,8 @@
 #
 # typed: true
 
+require 'rack'
+
 class BodyParamsContract
   MissingParams = Struct.new(:errors)
 
