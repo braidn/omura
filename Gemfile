@@ -8,7 +8,8 @@ gem 'hanami-api', '~> 0.1'
 gem 'sorbet', group: 'development'
 gem 'sorbet-runtime'
 gem 'prettier'
-gem 'ulid-ruby'
+gem 'ulid'
+gem 'rack'
 
 group :test do
   gem 'minitest-matchers_vaccine'
