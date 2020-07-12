@@ -2,19 +2,19 @@
 #
 # typed: true
 
-require 'rack'
+require "rack"
 
 class BodyParamsContract
   MissingParams = Struct.new(:errors)
 
   def call(params)
-    params.include?('_links') ? links_present : links_missing
+    params.include?("_links") ? links_present : links_missing
   end
 
   private
 
   def links_missing
-    MissingParams.new(['Missing required _links object'])
+    MissingParams.new(["Missing required _links object"])
   end
 
   def links_present
@@ -49,6 +49,6 @@ class BodyParamsValidator
   end
 
   def bad_request
-    [400, { 'Content-Type' => 'application/hal+json' }, {}]
+    [400, {"Content-Type" => "application/hal+json"}, {}]
   end
 end
