@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 # typed: strong
-
-require_relative './base_publisher'
+require_relative("./base_publisher")
 
 class ProductPublisher < BasePublisher
   sig { void }

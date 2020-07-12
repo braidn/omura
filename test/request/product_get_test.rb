@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 # typed: ignore
 
-require_relative '../spec_helper'
+require_relative("../spec_helper")
 
 class ProductGetTest < RequestTest
-  describe 'GET /api/v1/product/:id' do
-    describe 'success' do
-      let(:ulid) { '123ME' }
+  describe("GET /api/v1/product/:id") do
+    describe("success") do
+      let(:ulid) { "123ME" }
       let(:product_get_route) { "/api/v1/product/#{ulid}" }
 
       let(:product_response) do
         {
-          _links: { href: "api/v1/product/#{ulid}" },
-          name: 'Old Gregg',
-          description: 'Locke Monster',
+          _links: {href: "api/v1/product/#{ulid}"},
+          name: "Old Gregg",
+          description: "Locke Monster",
           active: true
         }
       end
@@ -32,8 +32,8 @@ class ProductGetTest < RequestTest
         end.new(product_response)
       end
 
-      it 'returns a 200 response code' do
-        res = get product_get_route
+      it("returns a 200 response code") do
+        res = get(product_get_route)
 
         _(res.status).must_equal 200
       end

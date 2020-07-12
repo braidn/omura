@@ -16,7 +16,6 @@ GEM
     mustermann-contrib (1.1.1)
       hansi (~> 0.2.0)
       mustermann (= 1.1.1)
-    prettier (0.18.0)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -33,7 +32,6 @@ PLATFORMS
 DEPENDENCIES
   hanami-api (~> 0.1)
   minitest-matchers_vaccine
-  prettier
   rack
   rack-test
   sorbet
