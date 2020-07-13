@@ -9,6 +9,7 @@ require "minitest/autorun"
 require "minitest/spec"
 require "rack/mock"
 require "rack/test"
+require 'stripe_mock'
 
 Dir[File.join(__dir__, "..", "publishers", "*.rb")].each { |file| require file }
 Dir[File.join(__dir__, "..", "repositories", "*.rb")].each { |file| require file }
@@ -24,4 +25,10 @@ class RequestTest < Minitest::Spec
 end
 
 class UnitTest < Minitest::Spec
+  def resource_helper
+    StripeMock.create_test_helper
+  end
+
+  before { StripeMock.start }
+  after { StripeMock.stop }
 end
