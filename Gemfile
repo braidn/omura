@@ -9,8 +9,10 @@ gem 'sorbet', group: 'development'
 gem 'sorbet-runtime'
 gem 'ulid'
 gem 'rack'
+gem 'stripe'
 
 group :test do
   gem 'minitest-matchers_vaccine'
   gem 'rack-test'
+  gem 'stripe-ruby-mock', '~> 3.0.1'
 end
