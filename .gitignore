@@ -2,4 +2,5 @@
 *.rbc
 /.config
 /.bundle
+.envrc
 sorbet/rbi/hidden-definitions/errors.txt
