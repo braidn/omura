@@ -1,3 +1,7 @@
 require_relative './app'
 
-run App.freeze.app
+unless ENV["RACK_ENV"] == "development"
+  App.freeze
+end
+
+run App.app
