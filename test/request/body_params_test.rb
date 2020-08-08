@@ -5,18 +5,14 @@
 require_relative("../spec_helper")
 
 class BodyParamsTest < RequestTest
-  let(:base_app) do
-    Class.new(Hanami::API) do
+  let(:app) do
+    Rack::Builder.new do
       use BodyParamsValidator
-
-      post("/api/products") do
-        [201, {"Content-Type" => "application/hal+json"}, ""]
-      end
-
-    end.new
+      run(->(env) { [201, env] })
+    end 
   end
 
-  let(:api) { Rack::MockRequest.new(base_app) }
+  let(:api) { Rack::MockRequest.new(app) }
 
   let(:params) do
     {
@@ -36,14 +32,14 @@ class BodyParamsTest < RequestTest
   describe("POST any resource") do
     describe("succeeds") do
       it("with a 201 due to the presence of attributes and resource keys") do
-        req = api.post("/api/products", params: params)
+        req = api.post("/", params: params)
         _(req.status).must_equal 201
       end
     end
 
     describe("fails") do
       it("with a 400 due to missing params") do
-        req = api.post("/api/products", params: missing_params)
+        req = api.post("/", params: missing_params)
 
         _(req.status).must_equal 400
       end
