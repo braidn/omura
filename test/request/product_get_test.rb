@@ -34,7 +34,6 @@ class ProductGetTest < RequestTest
       end
 
       it("returns a 200 response code") do
-        binding.irb
         res = get(product_get_route)
 
         _(res.status).must_equal 200
