@@ -8,7 +8,7 @@ class ProductRepositoryTest < UnitTest
 
   describe("#get") do
     let(:id) { "prod_#{ULID.generate}" }
-    let(:_links) {  {:self => {:href => "/products/#{id}"}} }
+    let(:_links) { {:self => {:href => "/products/#{id}"}} }
 
     before do
       resource_helper.create_product(id: id, name: "Bilbo Baggins")

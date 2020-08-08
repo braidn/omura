@@ -9,7 +9,7 @@ require "minitest/autorun"
 require "minitest/spec"
 require "rack/mock"
 require "rack/test"
-require 'stripe_mock'
+require "stripe_mock"
 
 Dir[File.join(__dir__, "..", "publishers", "*.rb")].each { |file| require file }
 Dir[File.join(__dir__, "..", "repositories", "*.rb")].each { |file| require file }

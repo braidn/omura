@@ -8,8 +8,8 @@ class BodyParamsTest < RequestTest
   let(:app) do
     Rack::Builder.new do
       use BodyParamsValidator
-      run(->(env) { [201, env] })
-    end 
+      run(-> (env) { [201, env] })
+    end
   end
 
   let(:api) { Rack::MockRequest.new(app) }
