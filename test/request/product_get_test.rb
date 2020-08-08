@@ -7,6 +7,7 @@ class ProductGetTest < RequestTest
   describe("GET /api/v1/product/:id") do
     describe("success") do
       let(:ulid) { "123ME" }
+      let(:product) { Stripe::Product.create(name: 'Old Gregg', id: ulid) }
       let(:product_get_route) { "/api/v1/product/#{ulid}" }
 
       let(:product_response) do
@@ -33,6 +34,7 @@ class ProductGetTest < RequestTest
       end
 
       it("returns a 200 response code") do
+        binding.irb
         res = get(product_get_route)
 
         _(res.status).must_equal 200
