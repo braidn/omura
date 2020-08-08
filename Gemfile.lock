@@ -2,26 +2,15 @@ GEM
   remote: https://rubygems.org/
   specs:
     dante (0.2.0)
-    hanami-api (0.1.1)
-      hanami-router (~> 2.0.alpha)
-    hanami-router (2.0.0.alpha3)
-      mustermann (~> 1.0)
-      mustermann-contrib (~> 1.0)
-      rack (~> 2.0)
-    hansi (0.2.0)
     minitest (5.14.0)
     minitest-matchers_vaccine (1.0.4)
       minitest (~> 5.0)
     multi_json (1.15.0)
-    mustermann (1.1.1)
-      ruby2_keywords (~> 0.0.1)
-    mustermann-contrib (1.1.1)
-      hansi (~> 0.2.0)
-      mustermann (= 1.1.1)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    ruby2_keywords (0.0.2)
+    roda (3.34.0)
+      rack
     sorbet (0.5.5429)
       sorbet-static (= 0.5.5429)
     sorbet-runtime (0.5.5429)
@@ -37,10 +26,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  hanami-api (~> 0.1)
   minitest-matchers_vaccine
   rack
   rack-test
+  roda
   sorbet
   sorbet-runtime
   stripe
