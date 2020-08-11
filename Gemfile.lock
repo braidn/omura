@@ -11,10 +11,10 @@ GEM
       rack (>= 1.0, < 3)
     roda (3.34.0)
       rack
-    sorbet (0.5.5429)
-      sorbet-static (= 0.5.5429)
+    sorbet (0.5.5866)
+      sorbet-static (= 0.5.5866)
     sorbet-runtime (0.5.5429)
-    sorbet-static (0.5.5429-universal-darwin-14)
+    sorbet-static (0.5.5866-universal-darwin-14)
     stripe (5.22.0)
     stripe-ruby-mock (3.0.1)
       dante (>= 0.2.0)
