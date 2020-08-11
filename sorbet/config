@@ -1,2 +1,5 @@
 --dir
-.
+./middlewares
+./publishers
+./repositories
+./test
