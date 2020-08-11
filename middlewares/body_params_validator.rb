@@ -33,8 +33,8 @@ class BodyParamsValidator
   end
 
   def call(env)
-    req = Gem::Request.new(env)
-    return @app.call(env) unless req.post? || req.catch || req.putc
+    req = Rack::Request.new(env)
+    return @app.call(env) unless req.post? || req.patch? || req.put?
 
     check = links_present?(req.params)
 
@@ -55,7 +55,7 @@ class BodyParamsValidator
     BodyParamsContract.new
   end
 
-  sig { returns(T::Array[T.any(T::Hash[T.String, T.String], Integer)]) }
+  sig { returns(T::Array[T.any(T::Hash[String, String], Integer)]) }
   def bad_request
     [400, {"Content-Type" => "application/hal+json"}, {}]
   end
