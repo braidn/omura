@@ -15,7 +15,7 @@ class ProductRepositoryTest < UnitTest
     end
 
     it("returns a single product resource using a unique identifier") do
-      _(subject.get(id)[:_links].to_hash).must_equal _links
+      _(subject.get(id)).must_be_instance_of Product
     end
   end
 end
