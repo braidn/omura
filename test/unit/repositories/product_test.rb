@@ -7,19 +7,15 @@ class ProductRepositoryTest < UnitTest
   subject { ::ProductRepository.new }
 
   describe("#get") do
-    let(:product) do
-      {
-        id: "123ME",
-        name: "Bilbo Baggins Bag-End",
-        description: "A Hovel",
-        active: true
-      }
+    let(:id) { "prod_#{ULID.generate}" }
+    let(:_links) { {:self => {:href => "/products/#{id}"}} }
+
+    before do
+      resource_helper.create_product(id: id, name: "Bilbo Baggins")
     end
 
-    let(:links) { {_links: {self: {href: "/products/#{product[:id]}"}}} }
-
     it("returns a single product resource using a unique identifier") do
-      _(subject.get(product[:id])).must_equal product.merge(links)
+      _(subject.get(id)).must_be_instance_of Product
     end
   end
 end

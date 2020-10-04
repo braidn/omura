@@ -1,3 +1,9 @@
-require_relative './app'
+# typed: ignore
 
-run App.new
+require_relative("./app")
+
+unless ENV["RACK_ENV"] == "development"
+  App.freeze
+end
+
+run(App.app)

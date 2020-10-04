@@ -1,32 +1,43 @@
-# typed: false
+# typed: ignore
 # frozen_string_literal: true
 
-require 'bundler/setup'
-require 'hanami/api'
-require 'ulid'
-require_relative './middlewares/body_params_validator'
+require "bundler/setup"
+require "roda"
+require "ulid"
 
-class App < Hanami::API
-  get '/' do
-    200
-  end
+require_relative("./middlewares/body_params_validator")
 
-  scope 'api' do
-    use BodyParamsValidator
-    scope 'v1' do
-      get '/product/:id' do
-        repo = ProductRepository.new
-        product = repo.get(params[:id])
+class App < Roda
+  use BodyParamsValidator
 
-        json(product, 'application/hal+json')
-      end
+  route do |r|
+    r.root do
+      r.redirect "/status"
+    end
 
-      post '/products' do
-        id = ULID.generate
+    r.get("/status") do
+      {status: "alive"}
+    end
 
-        status(201)
-        headers['Location'] = "/api/v1/product/#{id}"
-        json(params, 'application/hal+json')
+    r.on("api") do
+      r.on("v1") do
+        r.on("product", String) do |product_id|
+          repo = ProductRepository.new
+          product = repo.get(product_id)
+          response["Content-Type"] = "application/hal+json"
+
+          product.to_json
+        end
+
+        r.post("products") do
+          response["Content-Type"] = "application/hal+json"
+          response.status = 201
+
+          id = ULID.generate
+          response["Location"] = "/api/v1/product/#{id}"
+
+          r.params.to_json
+        end
       end
     end
   end
