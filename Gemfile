@@ -14,5 +14,5 @@ gem("stripe")
 group(:test) do
   gem("minitest-matchers_vaccine")
   gem("rack-test")
-  gem("stripe-ruby-mock", "~> 3.0.1")
+  gem("webmock")
 end
