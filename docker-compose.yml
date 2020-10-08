@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  backend: &backend
+    image: s_ecom:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/usr/src/app:delegated
+    networks:
+      - default
+  
+  web:
+    <<: *backend
+    build:
+      context: .
+      target: dev
+    depends_on:
+      - stripe
+    container_name: 's_ecom_web'
+    environment:
+      - STRIPE_URL=stripe
+      - STRIPE_API_KEY
+  stripe:
+    image: stripemock/stripe-mock:latest
+    ports:
+      - 12111-12112:12111-12112
+    networks:
+      - default
+    container_name: 's_ecom_payments'
