@@ -26,7 +26,7 @@ class App < Roda
           product = repo.get(product_id)
           response["Content-Type"] = "application/hal+json"
 
-          product.to_json
+          Stripe::StripeObject.construct_from(product).to_json
         end
 
         r.post("products") do
