@@ -1,4 +1,4 @@
-# Project Title
+# [Omura](https://en.wikipedia.org/wiki/Omura%27s_whale)
 
 One Paragraph of project description goes here
 
@@ -55,5 +55,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * [PurpleBooth](https://github.com/PurpleBooth) - For wonderful readme templates.
-* [Beluga](https://github.com/binx/beluga) - For inspiring me to build smaller ecom tooling.
+* [Beluga](https://github.com/binx/beluga) - For inspiring me to build smaller ecom tooling and naming.
 * [Spree/Solidus](https://github.com/solidusio/solidus) - For making e-commerce in Ruby fun.
