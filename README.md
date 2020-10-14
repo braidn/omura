@@ -1,10 +1,15 @@
 # [Omura](https://en.wikipedia.org/wiki/Omura%27s_whale)
 
-One Paragraph of project description goes here
+E-commerce on the thin!
+A very small and tiny way to smooth over any hiccups for Stripe's Product API.
+Also includes the ability to add products and
+eventually capture payments.
+
+Could be used as an e-commerce API layer for stores that want a little bit 'more control'.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
