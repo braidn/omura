@@ -17,7 +17,9 @@ jobs:
   test:
 
     runs-on: ubuntu-latest
-
+    services:
+      stripe:
+        image: stripemock/stripe-mock:latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
@@ -33,3 +35,4 @@ jobs:
       run: bundle exec ruby -Itest -e 'Dir["./test/**/{test_*,*_test}.rb"].each &method(:require)' --
       env:
         STRIPE_API_KEY: sk_test_nH1uriQSPitliwjtAuGugMvx
+        STRIPE_URL: stripe
