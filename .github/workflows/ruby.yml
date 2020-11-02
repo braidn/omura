@@ -21,6 +21,11 @@ jobs:
         image: stripemock/stripe-mock:latest
         ports:
           - 12111:12111
+        options: >-
+          --health-cmd curl -H "Authorization: Bearer sk_test_nH1uriQSPitliwjtAuGugMvx" -sS http://stripe:12111/v1/products || echo exit 1
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby
