@@ -20,6 +20,8 @@ jobs:
     services:
       stripe:
         image: stripemock/stripe-mock:latest
+        ports:
+          - 12111-12112:12111-12112
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
