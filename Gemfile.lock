@@ -1,11 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    dante (0.2.0)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    crack (0.4.4)
+    hashdiff (1.0.1)
     minitest (5.14.0)
     minitest-matchers_vaccine (1.0.4)
       minitest (~> 5.0)
-    multi_json (1.15.0)
+    public_suffix (4.0.6)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -16,11 +19,11 @@ GEM
     sorbet-runtime (0.5.5429)
     sorbet-static (0.5.5866-universal-darwin-14)
     stripe (5.22.0)
-    stripe-ruby-mock (3.0.1)
-      dante (>= 0.2.0)
-      multi_json (~> 1.0)
-      stripe (> 5, < 6)
     ulid (1.2.0)
+    webmock (3.9.1)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   ruby
@@ -33,8 +36,8 @@ DEPENDENCIES
   sorbet
   sorbet-runtime
   stripe
-  stripe-ruby-mock (~> 3.0.1)
   ulid
+  webmock
 
 BUNDLED WITH
    2.1.4

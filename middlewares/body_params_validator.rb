@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 #
-# typed: strict
+# typed: true
 
 require "rack"
+require 'sorbet-runtime'
 
 class BodyParamsContract
   extend T::Sig
@@ -60,3 +61,4 @@ class BodyParamsValidator
     [400, {"Content-Type" => "application/hal+json"}, {}]
   end
 end
+
